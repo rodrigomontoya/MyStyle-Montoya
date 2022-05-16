@@ -544,6 +544,33 @@
     font-size:1rem;
     
 }
+  #Eslogan{
+     animation-name: colores;
+     animation-duration:4s;
+     animation-iteration-count: infinite;
+     animation-timing-function:ease;
+     animation-delay: 1s;
+ }
+ @keyframes colores {
+     0%{color:white}
+     50%{color:grey}
+     100%{color:black}
+ }
+
+ .nav_bar ul{
+    animation-name: borde;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+    animation-delay: 1s;
+    border: 2px solid;
+    
+ }
+  @keyframes borde{
+    0%{border-color:black}
+    50%{border-color:red}
+    100%{border-color:black}
+  }
 /* Los media queries van despues (de mayor a menor) si hemos comenzado con el código pensando en escritorio */
 /*-------TABLET---------*/
 @media  (max-width: 1199px)
