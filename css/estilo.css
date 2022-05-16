@@ -1,0 +1,884 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*----------------------- Estilo Index*---------------------------------*/
+
+/*Contenedor general*/
+.container {
+    display: grid;
+    width:100%;
+    grid-template-columns:100%; 
+    grid-template-rows: minmax(5%,auto) minmax(5%,auto) minmax(2%,auto); 
+    grid-template-areas: 
+      "header_container"
+      "main_container"
+      "footer_container"; 
+  }
+  .header_container {  
+     display:flex;
+     width: 100%;
+     flex-direction:column; 
+     grid-area:header_container;
+  }
+  .logo{
+      border:solid 7px;
+      border-radius:5px;
+      color:rgb(29, 27, 27); 
+      background: url("../imagenes/fondoLogo1.jpg");
+      background-size: 1500px;
+      background-position-y:-290px;
+      background-repeat:no-repeat;   
+  }
+  .nav_bar{
+    flex-direction: row;
+    max-width:100%;
+    display:block;
+  }
+
+   
+    .nav_bar ul{
+        display:flex;
+        list-style:none;
+        max-width: 100%;
+        padding:0;
+        margin:0;
+        justify-content: space-evenly;
+        background-color: #0D0401;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='637' height='637' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23B51F0B' stroke-width='2.2'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23851708'%3E%3Ccircle cx='769' cy='229' r='12'/%3E%3Ccircle cx='539' cy='269' r='12'/%3E%3Ccircle cx='603' cy='493' r='12'/%3E%3Ccircle cx='731' cy='737' r='12'/%3E%3Ccircle cx='520' cy='660' r='12'/%3E%3Ccircle cx='309' cy='538' r='12'/%3E%3Ccircle cx='295' cy='764' r='12'/%3E%3Ccircle cx='40' cy='599' r='12'/%3E%3Ccircle cx='102' cy='382' r='12'/%3E%3Ccircle cx='127' cy='80' r='12'/%3E%3Ccircle cx='370' cy='105' r='12'/%3E%3Ccircle cx='578' cy='42' r='12'/%3E%3Ccircle cx='237' cy='261' r='12'/%3E%3Ccircle cx='390' cy='382' r='12'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .nav_bar ul li{
+     flex:grow 3;   
+    }
+    .nav_bar ul li a {
+        background-color:rgb(8, 8, 8);
+        display: block;
+        padding:20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 3rem;
+        font-size:18px;
+        color:rgb(241, 240, 233);
+        text-align: center;
+        align-items: center;
+     
+    }
+     
+    .nav_bar ul li a:hover{
+        background-color:rgba(155, 14, 14, 0.911);
+        color:white;
+        transition:2s; 
+    }
+ /*---------------MAIN---------------------*/
+ .main_container{
+     width:100%;
+     background-color: #B00000;
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23920000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23730000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23550000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23360000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23180000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+     background-attachment: fixed;
+     background-size: cover;
+     grid-area:main_container;
+ }
+ .main_container #Texto{
+     display:flex;
+     flex-direction: row;
+     align-items: center;
+     text-align: center;
+     gap:395px; 
+     
+ }
+
+
+ .main_container #Texto #Titulo{
+
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 3rem;
+   color: rgb(5, 4, 4);
+   border: solid;
+   border-radius: 10px;
+   padding: 1px;
+   background-color: rgba(240, 248, 255, 0.651);
+   font-style: oblique;
+   
+   
+ }
+ .main_container #Texto #Titulo:hover {
+    background-color:rgba(155, 14, 14, 0.911);
+    color:white;
+    transition:2s; 
+ }
+ .main_container #Texto #Eslogan{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(230, 218, 218);
+ }
+
+.main_container #Article1{
+    width:100%;
+    display:flex;
+    flex-direction:row;  
+}
+
+.main_container #Article1 .foto_inicio1{ 
+ border-style: groove;
+ border-color: white;
+ 
+}
+.main_container #Article1 .foto_inicio1:hover{ 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s; 
+   
+   }
+.main_container #Article1 .texto_foto1{ 
+    color: rgb(230, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:0.8rem;
+}
+.main_container #Article2{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+   
+}
+.main_container #Article2 .foto_inicio2{
+    border-style: groove;
+    border-color: white;
+    padding: 1px;
+  
+}
+.main_container #Article2 .foto_inicio2:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: transform 2s; 
+}
+.main_container #Article2 .texto_foto2{
+    color: rgb(230, 218, 218);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:0.7rem;
+    justify-content: center;
+}
+.main_container #Article2 .video_introduccion{
+    border-style: groove;
+    border-color: white;
+    padding: 1px;
+}
+
+
+/*---------------FOOTER---------------------*/
+ .footer_container{
+     width:100%;
+     display:flex;
+     flex-direction:row;
+     background-color: #7B040C;
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%235e0b15' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440f18' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%232d1016' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%231a0d11' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%230A0708' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+     background-attachment: fixed;
+     background-size: cover;
+     justify-content: space-around;
+     align-items: flex-end;
+     grid-area:footer_container;
+ }
+
+ .footer_container #Redes .titulo_redes_sociales{
+    color: rgb(230, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:0.8rem;
+    text-align: center;
+
+ }
+ .footer_container #Redes .redes_sociales #facebook,#instagram,#twitter,#youtube{
+    margin: auto;
+    border-style: outset;
+    border-color: rgb(250, 244, 244);
+ }
+ .footer_container .texto_footer{
+    color: rgb(230, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+ }
+ .footer_container .texto_footer h1{
+    font-size:1rem;
+ }
+ .footer_container .texto_footer h2{
+    font-size:1rem;
+ }
+ .footer_container .texto_footer h3{
+    font-size:1rem;
+ }
+ .footer_container .texto_footer h4{
+     font-size:0.7rem;
+ }
+
+ /* Los media queries van despues (de mayor a menor) si hemos comenzado con el código pensando en escritorio */
+/*-------TABLET---------*/
+  @media  (max-width: 1199px)
+   {
+       .header-container{
+        grid-template-columns: repeat(2,50%);
+    }
+       
+    .main_container {
+             grid-template-columns: repeat(2,50%);
+            }
+        #Article1,#Article2{
+            background-color:rgb(138, 17, 138);
+        }
+    }
+/*-------MOBILE---------*/
+ @media  (max-width: 912px)
+  { 
+    .header-container{
+        grid-template-columns: repeat(1,100%);
+    }
+    .main_container {
+        grid-template-columns: repeat(1,100%);
+       }
+       .foto_inicio2,.texto_foto2{
+           display:none;
+       }
+
+
+        #Article1,#Article2 {
+             background-color: rgb(45, 146, 45);
+                }
+     }
+@media (max-width:635px)
+     { 
+       .header-container{
+           grid-template-columns: repeat(1,100%);
+       }
+       .main_container {
+           grid-template-columns: repeat(1,100%);
+          }
+          .foto_inicio2,.texto_foto2{
+              display:none;
+          }
+        .nav_bar nav ul{
+            display:flex;
+            flex-direction:column;
+        }
+      #Eslogan{
+            display:none;
+        }
+           #Article1,#Article2 {
+                background-color: rgb(221, 19, 171);
+                   }
+    }
+    
+/*-------Estilo Sobre Nosotros---------*/
+
+
+#tituloSobreNosotros {
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: rgb(5, 4, 4);
+    border: solid;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: rgba(240, 248, 255, 0.651);
+    font-style: oblique;
+    position: absolute;
+    top: 50%;
+}
+
+#foto1 {
+    position: absolute;
+    top: 65%;
+    display: block;
+    border-style: groove;
+    border-color: white;
+    padding: 1px;
+}
+
+#textoFoto1 {
+    display: inline;
+    width: 79%;
+    position: absolute;
+    color: rgb(230, 218, 218);
+    top: 70%;
+    left: 20.5%;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*pie de pagina*/
+#facebook2,
+#instagram2,
+#twitter2,
+#youtube2 {
+    display: block-inline;
+    margin: auto;
+    border-style: outset;
+    border-color: rgb(250, 244, 244);
+    position: relative;
+    margin-top: -5%;
+    left: 5%;
+}
+
+#tituloRedesSociales2 {
+    display: inline;
+    width: 100%;
+    font-style: oblique;
+    position: absolute;
+    color: rgb(230, 218, 218);
+    top: 155%;
+    left: 7%;
+    font-size: 1.2rem;
+}
+
+
+.fotoMediosDePago2 {
+    position: absolute;
+    bottom: -71%;
+    left: 83%;
+}
+
+
+.pieDePagina2 h1 {
+    position: absolute;
+    top: 168%;
+    left: 30%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina2 h2 {
+    position: absolute;
+    top: 145%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina2 h3 {
+    position: absolute;
+    top: 149%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina2 h4 {
+    position: absolute;
+    top: 153%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+
+/*Estilo al fondo*/
+
+.pieDePagina2 {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%230d0d0d' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23171717' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%231e1e1e' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23262626' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%232E2E2E' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 230px;
+}
+
+.cuerpo2 {
+    background-color: #B00000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23920000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23730000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23550000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23360000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23180000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 500px;
+}
+
+/*-----------------------------PRODUCTOS------------------*/
+
+   /*---------------MAIN---------------------*/
+
+
+.main_container #Texto {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap:20%; 
+}
+.main_container #Texto #Titulo_productos:hover{
+    background-color:rgba(155, 14, 14, 0.911);
+    color:white;
+    transition:2s;
+}
+
+.main_container #Texto #Titulo_productos{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 3rem;
+   color: rgb(5, 4, 4);
+   border: solid;
+   border-radius: 10px;
+   padding: 1px;
+   background-color: rgba(240, 248, 255, 0.651);
+   font-style: oblique;
+}
+#Galeria{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap:20px;
+   justify-content:center;
+
+}
+#Galeria #producto1 img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto2 img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto3  img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto4  img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto5  img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto6  img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto7 img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+#Galeria #producto8 img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+
+#Galeria #producto1,#producto2,#producto3,#producto4,#producto5,#producto6,#producto7,#producto8{
+   text-align:center; 
+   border:solid 5px;
+   border-radius:5px;
+   color:black;
+}
+#Galeria #producto1 #texto1,#producto2 #texto2,#producto3 #texto3,#producto4 #texto4,#producto5 #texto5,#producto6 #texto6,#producto7 #texto7,#producto8 #texto8{
+    color: rgb(230, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:1.2rem;
+}
+
+#Galeria #producto1 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgb(20, 113, 150);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto2 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto3 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto4 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto5 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto6 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto7 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+#Galeria #producto8 #boton{
+    color: rgb(17, 16, 16) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+    font-size:1rem;
+    
+}
+/* Los media queries van despues (de mayor a menor) si hemos comenzado con el código pensando en escritorio */
+/*-------TABLET---------*/
+@media  (max-width: 1199px)
+{
+    .header-container{
+     grid-template-columns: repeat(2,50%);
+ }
+    
+ .main_container #Texto {
+          grid-template-columns: repeat(2,50%);
+         }
+     #Galeria{
+        grid-template-columns: repeat(3,33,3%);
+         background-color:rgb(138, 17, 138);
+     }
+ }
+/*-------MOBILE---------*/
+@media  (max-width: 912px)
+{ 
+    .header-container{
+        grid-template-columns: repeat(2,50%);
+    }
+       
+    .main_container #Texto {
+             grid-template-columns: repeat(2,50%);
+            }
+        #Galeria{
+           grid-template-columns: repeat(3,33,3%);
+            background-color:rgb(10, 175, 24);
+        }
+ 
+  }
+@media (max-width:635px)
+  { 
+    .header-container{
+        grid-template-columns: repeat(2,50%);
+    }
+       
+    .main_container #Texto {
+             grid-template-columns: repeat(2,50%);
+            }
+        #Galeria{
+           grid-template-columns: repeat(1,100%);
+            background-color:rgb(184, 161, 184);
+        }
+    
+ }
+
+
+
+/*-----------------------UBICACION------------------------------*/
+
+#tituloUbicacion {
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: rgb(5, 4, 4);
+    border: solid;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: rgba(240, 248, 255, 0.651);
+    font-style: oblique;
+    position: absolute;
+    top: 50%;
+}
+
+#mapaUbicacion {
+    display: block;
+    border-style: groove;
+    border-color: white;
+    padding: 5px;
+    position: absolute;
+    top: 68%;
+
+}
+
+#ubicacion img {
+    position: absolute;
+    top: 68%;
+    left: 53%;
+    opacity: 1000;
+}
+
+#ubicacion h1 {
+    display: block;
+    color: rgb(230, 218, 218);
+
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#ubicacion h2 {
+    display: block;
+    color: rgb(230, 218, 218);
+    position: absolute;
+    top: 77%;
+    left: 60%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*pie de pagina*/
+#facebook4,
+#instagram4,
+#twitter4,
+#youtube4 {
+    display: block-inline;
+    margin: auto;
+    border-style: outset;
+    border-color: rgb(250, 244, 244);
+    position: relative;
+    margin-top: -5%;
+    left: 5%;
+}
+
+#tituloRedesSociales4 {
+    display: inline;
+    width: 100%;
+    font-style: oblique;
+    position: absolute;
+    color: rgb(230, 218, 218);
+    top: 191%;
+    left: 7%;
+    font-size: 1.2rem;
+}
+
+
+.fotoMediosDePago4 {
+    position: absolute;
+    bottom: -107%;
+    left: 83%;
+}
+
+
+.pieDePagina4 h1 {
+    position: absolute;
+    top: 203%;
+    left: 32%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina4 h2 {
+    position: absolute;
+    top: 183%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina4 h3 {
+    position: absolute;
+    top: 187%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina4 h4 {
+    position: absolute;
+    top: 191%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+
+
+/*Estilo al fondo*/
+
+.pieDePagina4 {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%230d0d0d' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23171717' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%231e1e1e' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23262626' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%232E2E2E' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 230px;
+}
+
+.cuerpo4 {
+    background-color: #B00000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23920000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23730000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23550000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23360000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23180000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 700px;
+}
+
+/*--------CONTACTO------*/
+
+#tituloContacto {
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: rgb(5, 4, 4);
+    border: solid;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: rgba(240, 248, 255, 0.651);
+    font-style: oblique;
+    position: absolute;
+    top: 50%;
+}
+
+p {
+    display: inline;
+    width: 100%;
+    color: rgb(230, 218, 218);
+    position: absolute;
+    top: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#formulario {
+    position: absolute;
+    top: 95%;
+    left: 1%;
+    width: 98%;
+}
+
+#formulario legend,
+label {
+    display: block;
+    color: rgb(230, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+}
+
+#formulario input {
+    width: 9%;
+    height: 9%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: rgb(22, 21, 21);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#formulario textarea {
+    width: 600px;
+    height: 120px;
+}
+/*pie de pagina*/
+#facebook5,
+#instagram5,
+#twitter5,
+#youtube5 {
+    display: block-inline;
+    margin: auto;
+    border-style: outset;
+    border-color: rgb(250, 244, 244);
+    position: relative;
+    margin-top: -5%;
+    left: 5%;
+}
+#tituloRedesSociales5 {
+    display: inline;
+    width: 100%;
+    font-style: oblique;
+    position: absolute;
+    color: rgb(230, 218, 218);
+    top: 201%;
+    left: 7%;
+    font-size: 1.2rem;
+}
+.fotoMediosDePago5 {
+    position: absolute;
+    bottom: -116%;
+    left: 83%;
+}
+.pieDePagina5 h1{
+    position: absolute;
+    top: 214%;
+    left: 32%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina5 h2 {
+    position: absolute;
+    top: 192%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina5 h3 {
+    position: absolute;
+    top: 196%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+.pieDePagina5 h4 {
+    position: absolute;
+    top: 200%;
+    left: 40%;
+    font-family: verdana;
+    font-style: oblique;
+    font-size: 0.80rem;
+    color: rgb(230, 218, 218);
+}
+
+
+
+/*Estilo al fondo*/
+
+.pieDePagina5 {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%230d0d0d' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23171717' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%231e1e1e' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23262626' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%232E2E2E' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 234px;
+}
+
+.cuerpo5 {
+    background-color: #B00000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23920000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23730000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23550000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23360000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23180000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 750px;
+}
+
+
+ 
